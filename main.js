@@ -10,7 +10,6 @@ button.addEventListener('click', (event) => {
   fetch(url)
     .then(response => response.text())
     .then(html => {
-      console.log(url);
       const cleanedHtml = html.replace(/filter:\s*blur\(\d+px\)\s*!important;/g, '');
 
       const cleanedHtmlElement = document.createElement('div');
