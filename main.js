@@ -12,9 +12,11 @@ form.addEventListener('submit', (event) => {
     .then(response => response.text())
     .then(html => {
       const cleanedHtml = html.replace(/filter:\s*blur\(\d+px\)\s*!important;/g, '');
+      const answer = cleanedHtml.match(/<article[^>]*>[\s\S]*<\/article>/g);
+
 
       const cleanedHtmlElement = document.createElement('div');
-      cleanedHtmlElement.innerHTML = cleanedHtml;
+      cleanedHtmlElement.innerHTML = answer;
       cleanedHtmlContainer.appendChild(cleanedHtmlElement);
       errorMessage.style.display = 'none';
     })

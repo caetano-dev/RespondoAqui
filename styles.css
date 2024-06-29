@@ -5,7 +5,6 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #4f4f4f;
   color: #333;
 }
 
@@ -76,10 +75,14 @@ h2 {
   background-color: #e6b800;
 }
 
-
 #cleaned-html {
-  margin-top: 2rem;
-  padding: 2rem;
-  background-color: #4f4f4f;
-  border-radius: 8px;
+  margin: 2rem 10rem;
+}
+
+#cleaned-html h1{
+  font-size: 1rem;
+}
+
+#cleaned-html button{
+  display: none;
 }
